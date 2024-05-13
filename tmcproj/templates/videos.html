@@ -3,7 +3,7 @@
 {% if forloop.counter == 1 %}
     {% if video.is_unlocked and video.watched_previous %}
     <video controls loop muted poster="{% static 'tutorials/ep1.jpg' %}" controlsList="nodownload">
-        <source src="{% static 'tutorials/v1.mp4' %}" type="video/mp4">
+        <source src="{% static 'tutorials/vd1.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
     {% elif not video.is_unlocked and video.watched_previous %}
