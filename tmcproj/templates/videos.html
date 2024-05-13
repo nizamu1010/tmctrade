@@ -3,12 +3,12 @@
 {% if forloop.counter == 1 %}
     {% if video.is_unlocked and video.watched_previous %}
     <video controls loop muted poster="{% static 'tutorials/ep1.jpg' %}" controlsList="nodownload">
-        <source src="{% static 'tutorials/vd1.mp4' %}" type="video/mp4">
+        <source src="{% static 'tutorials/v1.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
     {% elif not video.is_unlocked and video.watched_previous %}
     <img src="{% static 'tutorials/ep1.jpg' %}">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#unlockModal{{ video.id }}" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i> Unlocked</a>
+    <a href="{% url 'unlock_video' 1 %}" class="text-start text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i>Unlock</a>    
     {% else %}
     <img src="{% static 'tutorials/ep1.jpg' %}">
     <a href="#" data-bs-toggle="modal" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-lock-fill"></i> Locked</a>
@@ -26,7 +26,7 @@
     </video>
     {% elif not video.is_unlocked and video.watched_previous %}
     <img src="{% static 'tutorials/ep2.jpg' %}">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#unlockModal{{ video.id }}" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i> Unlocked</a>
+    <a href="{% url 'unlock_video' 2 %}" class="text-start text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i>Unlock</a>   
     {% else %}
     <img src="{% static 'tutorials/ep2.jpg' %}">
     <a href="#" data-bs-toggle="modal" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-lock-fill"></i> Locked</a>
@@ -44,7 +44,7 @@
     </video>
     {% elif not video.is_unlocked and video.watched_previous %}
     <img src="{% static 'tutorials/ep3.jpg' %}">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#unlockModal{{ video.id }}" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i> Unlocked</a>
+    <a href="{% url 'unlock_video' 3 %}" class="text-start text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i>Unlock</a>   
     {% else %}
     <img src="{% static 'tutorials/ep3.jpg' %}">
     <a href="#" data-bs-toggle="modal" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-lock-fill"></i> Locked</a>
@@ -62,8 +62,7 @@
     </video>
     {% elif not video.is_unlocked and video.watched_previous %}
     <img src="{% static 'tutorials/ep4.jpg' %}">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#unlockModal{{ video.id }}" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i> Unlocked</a>
-    {% else %}
+    <a href="{% url 'unlock_video' 4 %}" class="text-start text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i>Unlock</a>    
     <img src="{% static 'tutorials/ep4.jpg' %}">
     <a href="#" data-bs-toggle="modal" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-lock-fill"></i> Locked</a>
     {% endif %}
@@ -80,7 +79,7 @@
     </video>
     {% elif not video.is_unlocked and video.watched_previous %}
     <img src="{% static 'tutorials/ep5.jpg' %}">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#unlockModal{{ video.id }}" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i> Unlocked</a>
+    <a href="{% url 'unlock_video' 5 %}" class="text-start text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i>Unlock</a>    
     {% else %}
     <img src="{% static 'tutorials/ep5.jpg' %}">
     <a href="#" data-bs-toggle="modal" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-lock-fill"></i> Locked</a>
@@ -98,7 +97,7 @@
     </video>
     {% elif not video.is_unlocked and video.watched_previous %}
     <img src="{% static 'tutorials/ep6.jpg' %}">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#unlockModal{{ video.id }}" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i> Unlocked</a>
+    <a href="{% url 'unlock_video' 6 %}" class="text-start text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i>Unlock</a>    
     {% else %}
     <img src="{% static 'tutorials/ep6.jpg' %}">
     <a href="#" data-bs-toggle="modal" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-lock-fill"></i> Locked</a>
@@ -116,7 +115,7 @@
     </video>
     {% elif not video.is_unlocked and video.watched_previous %}
     <img src="{% static 'tutorials/ep7.jpg' %}">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#unlockModal{{ video.id }}" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i> Unlocked</a>
+    <a href="{% url 'unlock_video' 7 %}" class="text-start text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i>Unlock</a>    
     {% else %}
     <img src="{% static 'tutorials/ep7.jpg' %}">
     <a href="#" data-bs-toggle="modal" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-lock-fill"></i> Locked</a>
@@ -134,7 +133,7 @@
     </video>
     {% elif not video.is_unlocked and video.watched_previous %}
     <img src="{% static 'tutorials/ep8.jpg' %}">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#unlockModal{{ video.id }}" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i> Unlocked</a>
+    <a href="{% url 'unlock_video' 8 %}" class="text-start text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i>Unlock</a>   
     {% else %}
     <img src="{% static 'tutorials/ep8.jpg' %}">
     <a href="#" data-bs-toggle="modal" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-lock-fill"></i> Locked</a>
@@ -152,7 +151,7 @@
     </video>
     {% elif not video.is_unlocked and video.watched_previous %}
     <img src="{% static 'tutorials/ep9.jpg' %}">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#unlockModal{{ video.id }}" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i> Unlocked</a>
+    <a href="{% url 'unlock_video' 9 %}" class="text-start text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i>Unlock</a>   
     {% else %}
     <img src="{% static 'tutorials/ep9.jpg' %}">
     <a href="#" data-bs-toggle="modal" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-lock-fill"></i> Locked</a>
@@ -170,7 +169,7 @@
     </video>
     {% elif not video.is_unlocked and video.watched_previous %}
     <img src="{% static 'tutorials/ep10.jpg' %}">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#unlockModal{{ video.id }}" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i> Unlocked</a>
+    <a href="{% url 'unlock_video' 10 %}" class="text-start text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i>Unlock</a>    
     {% else %}
     <img src="{% static 'tutorials/ep10.jpg' %}">
     <a href="#" data-bs-toggle="modal" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-lock-fill"></i> Locked</a>
@@ -188,7 +187,7 @@
     </video>
     {% elif not video.is_unlocked and video.watched_previous %}
     <img src="{% static 'tutorials/ep11.jpg' %}">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#unlockModal{{ video.id }}" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i> Unlocked</a>
+    <a href="{% url 'unlock_video' 11 %}" class="text-start text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i>Unlock</a>    
     {% else %}
     <img src="{% static 'tutorials/ep11.jpg' %}">
     <a href="#" data-bs-toggle="modal" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-lock-fill"></i> Locked</a>
@@ -206,7 +205,7 @@
     </video>
     {% elif not video.is_unlocked and video.watched_previous %}
     <img src="{% static 'tutorials/ep12.jpg' %}">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#unlockModal{{ video.id }}" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i> Unlocked</a>
+    <a href="{% url 'unlock_video' 12 %}" class="text-start text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i>Unlock</a>    
     {% else %}
     <img src="{% static 'tutorials/ep12.jpg' %}">
     <a href="#" data-bs-toggle="modal" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-lock-fill"></i> Locked</a>
@@ -224,7 +223,7 @@
     </video>
     {% elif not video.is_unlocked and video.watched_previous %}
     <img src="{% static 'tutorials/ep13.jpg' %}">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#unlockModal{{ video.id }}" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i> Unlocked</a>
+    <a href="{% url 'unlock_video' 13 %}" class="text-start text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i>Unlock</a>    
     {% else %}
     <img src="{% static 'tutorials/ep13.jpg' %}">
     <a href="#" data-bs-toggle="modal" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-lock-fill"></i> Locked</a>
@@ -249,7 +248,7 @@
     </video>
     {% elif not video.is_unlocked and video.watched_previous %}
     <img src="{% static 'tutorials/ep14.jpg' %}">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#unlockModal{{ video.id }}" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i> Unlocked</a>
+    <a href="{% url 'unlock_video' 14 %}" class="text-start text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i>Unlock</a>   
     {% else %}
     <img src="{% static 'tutorials/ep14.jpg' %}">
     <a href="#" data-bs-toggle="modal" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-lock-fill"></i> Locked</a>
@@ -267,7 +266,7 @@
     </video>
     {% elif not video.is_unlocked and video.watched_previous %}
     <img src="{% static 'tutorials/ep15.jpg' %}">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#unlockModal{{ video.id }}" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i> Unlocked</a>
+    <a href="{% url 'unlock_video' 15 %}" class="text-start text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i>Unlock</a>   
     {% else %}
     <img src="{% static 'tutorials/ep15.jpg' %}">
     <a href="#" data-bs-toggle="modal" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-lock-fill"></i> Locked</a>
@@ -285,7 +284,7 @@
     </video>
     {% elif not video.is_unlocked and video.watched_previous %}
     <img src="{% static 'tutorials/ep16.jpg' %}">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#unlockModal{{ video.id }}" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i> Unlocked</a>
+    <a href="{% url 'unlock_video' 16 %}" class="text-start text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i>Unlock</a>   
     {% else %}
     <img src="{% static 'tutorials/ep16.jpg' %}">
     <a href="#" data-bs-toggle="modal" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-lock-fill"></i> Locked</a>
@@ -303,7 +302,7 @@
     </video>
     {% elif not video.is_unlocked and video.watched_previous %}
     <img src="{% static 'tutorials/ep17.jpg' %}">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#unlockModal{{ video.id }}" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i> Unlocked</a>
+    <a href="{% url 'unlock_video' 17 %}" class="text-start text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i>Unlock</a>    
     {% else %}
     <img src="{% static 'tutorials/ep17.jpg' %}">
     <a href="#" data-bs-toggle="modal" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-lock-fill"></i> Locked</a>
@@ -321,7 +320,7 @@
     </video>
     {% elif not video.is_unlocked and video.watched_previous %}
     <img src="{% static 'tutorials/ep18.jpg' %}">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#unlockModal{{ video.id }}" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i> Unlocked</a>
+    <a href="{% url 'unlock_video' 18 %}" class="text-start text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i>Unlock</a>    
     {% else %}
     <img src="{% static 'tutorials/ep18.jpg' %}">
     <a href="#" data-bs-toggle="modal" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-lock-fill"></i> Locked</a>
@@ -339,7 +338,7 @@
     </video>
     {% elif not video.is_unlocked and video.watched_previous %}
     <img src="{% static 'tutorials/ep19.jpg' %}">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#unlockModal{{ video.id }}" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i> Unlocked</a>
+    <a href="{% url 'unlock_video' 19 %}" class="text-start text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i>Unlock</a>    
     {% else %}
     <img src="{% static 'tutorials/ep19.jpg' %}">
     <a href="#" data-bs-toggle="modal" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-lock-fill"></i> Locked</a>
@@ -357,7 +356,7 @@
     </video>
     {% elif not video.is_unlocked and video.watched_previous %}
     <img src="{% static 'tutorials/ep20.jpg' %}">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#unlockModal{{ video.id }}" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i> Unlocked</a>
+    <a href="{% url 'unlock_video' 20 %}" class="text-start text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i>Unlock</a>    
     {% else %}
     <img src="{% static 'tutorials/ep20.jpg' %}">
     <a href="#" data-bs-toggle="modal" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-lock-fill"></i> Locked</a>
@@ -375,7 +374,7 @@
     </video>
     {% elif not video.is_unlocked and video.watched_previous %}
     <img src="{% static 'tutorials/ep21.jpg' %}">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#unlockModal{{ video.id }}" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i> Unlocked</a>
+    <a href="{% url 'unlock_video' 21 %}" class="text-start text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i>Unlock</a>   
     {% else %}
     <img src="{% static 'tutorials/ep21.jpg' %}">
     <a href="#" data-bs-toggle="modal" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-lock-fill"></i> Locked</a>
@@ -393,7 +392,7 @@
     </video>
     {% elif not video.is_unlocked and video.watched_previous %}
     <img src="{% static 'tutorials/ep22.jpg' %}">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#unlockModal{{ video.id }}" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i> Unlocked</a>
+    <a href="{% url 'unlock_video' 22 %}" class="text-start text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i>Unlock</a>   
     {% else %}
     <img src="{% static 'tutorials/ep22.jpg' %}">
     <a href="#" data-bs-toggle="modal" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-lock-fill"></i> Locked</a>
@@ -411,7 +410,7 @@
     </video2>
     {% elif not video.is_unlocked and video.watched_previous %}
     <img src="{% static 'tutorials/ep23.jpg' %}">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#unlockModal{{ video.id }}" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i> Unlocked</a>
+    <a href="{% url 'unlock_video' 23 %}" class="text-start text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i>Unlock</a>   
     {% else %}
     <img src="{% static 'tutorials/ep23.jpg' %}">
     <a href="#" data-bs-toggle="modal" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-lock-fill"></i> Locked</a>
@@ -429,7 +428,7 @@
     </video>
     {% elif not video.is_unlocked and video.watched_previous %}
     <img src="{% static 'tutorials/ep24.jpg' %}">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#unlockModal{{ video.id }}" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i> Unlocked</a>
+    <a href="{% url 'unlock_video' 24 %}" class="text-start text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i>Unlock</a>    
     {% else %}
     <img src="{% static 'tutorials/ep24.jpg' %}">
     <a href="#" data-bs-toggle="modal" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-lock-fill"></i> Locked</a>
@@ -447,7 +446,7 @@
     </video>
     {% elif not video.is_unlocked and video.watched_previous %}
     <img src="{% static 'tutorials/ep25.jpg' %}">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#unlockModal{{ video.id }}" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i> Unlocked</a>
+    <a href="{% url 'unlock_video' 25 %}" class="text-start text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i>Unlock</a>    
     {% else %}
     <img src="{% static 'tutorials/ep25.jpg' %}">
     <a href="#" data-bs-toggle="modal" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-lock-fill"></i> Locked</a>
@@ -465,7 +464,7 @@
     </video>
     {% elif not video.is_unlocked and video.watched_previous %}
     <img src="{% static 'tutorials/ep26.jpg' %}">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#unlockModal{{ video.id }}" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i> Unlocked</a>
+    <a href="{% url 'unlock_video' 26 %}" class="text-start text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i>Unlock</a>  
     {% else %}
     <img src="{% static 'tutorials/ep26.jpg' %}">
     <a href="#" data-bs-toggle="modal" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-lock-fill"></i> Locked</a>
@@ -483,7 +482,7 @@
     </video>
     {% elif not video.is_unlocked and video.watched_previous %}
     <img src="{% static 'tutorials/ep27.jpg' %}">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#unlockModal{{ video.id }}" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i> Unlocked</a>
+    <a href="{% url 'unlock_video' 27 %}" class="text-start text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i>Unlock</a>   
     {% else %}
     <img src="{% static 'tutorials/ep27.jpg' %}">
     <a href="#" data-bs-toggle="modal" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-lock-fill"></i> Locked</a>

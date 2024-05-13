@@ -61,10 +61,20 @@
           <h5 class="text-center mt-4" data-aos="fade-up" style="font-size: 1.2em; color: rgba(140, 189, 239, 0.45); font-family: 'Gill Sans', sans-serif; letter-spacing: 2px;">TRADING&nbsp;MASTERCLASS</h5>
           
           <p class="text-center custom-heading mt-0 mb-0 fw-bold" data-aos="fade-up" style="font-size: 1.9em; font-family: Georgia, serif; color: rgb(157 162 167 / 60%);">
-            Complete Guide to Trading
-        </p>
-        
-        
+            Complete Guide to Trading <br>
+          
+            {% if user.is_authenticated %}
+
+            {% if user.allowcourse.course_allowed %}
+            <a class="btn btn-outline-secondary font-monospace mt-3" href="{% url 'videos' %}" data-toggle="modal" data-target="#loginModal">Start Learning</a>
+            {% else %}
+              <a class="btn btn-outline-secondary font-monospace mt-3" href="#" data-bs-toggle="modal" data-bs-target="#alertModal_StartLearning">Start Learning</a>
+            {% endif %}
+
+          {% else %}
+          <a class="btn btn-outline-secondary font-monospace mt-3" href="{% url 'register' %}" data-toggle="modal" data-target="#loginModal">Register Now!</a>
+        {% endif %}
+          </p>
 
         </div>
 
@@ -77,7 +87,7 @@
     </div>
   </section><!-- End Hero Section --> 
 
-    <!-- ======= Call To Action Section ======= -->
+    <!-- ======= Call To Action Section ======= 
 
     <section id="call-to-action" class="call-to-action1 mt-0">
       <div class="container" data-aos="zoom-out">
@@ -88,20 +98,20 @@
                This course is perfect for newcomers who want to learn the basics of trading in the cryptocurrency market. You'll discover how to start and stop trades, and how technical analysis can improve your trading skills. Whether you're new to trading or looking to enhance your strategies, this course will help you gain the knowledge and confidence needed for successful crypto trading.</p>
             {% if user.is_authenticated %}
 
-              {% if user.allowcourse.course_allowed %}
-              <a class="cta-btn" href="{% url 'videos' %}" data-toggle="modal" data-target="#loginModal">Start Learning</a>
-              {% else %}
-                <a class="cta-btn" href="#" data-bs-toggle="modal" data-bs-target="#alertModal_StartLearning">Start Learning</a>
-              {% endif %}
+                {% if user.allowcourse.course_allowed %}
+                <a class="cta-btn" href="{% url 'videos' %}" data-toggle="modal" data-target="#loginModal">Start Learning</a>
+                {% else %}
+                  <a class="cta-btn" href="#" data-bs-toggle="modal" data-bs-target="#alertModal_StartLearning">Start Learning</a>
+                {% endif %}
 
-            {% else %}
-             <a class="cta-btn" href="{% url 'register' %}" data-toggle="modal" data-target="#loginModal">Register</a>
+              {% else %}
+              <a class="cta-btn" href="{% url 'register' %}" data-toggle="modal" data-target="#loginModal">Register</a>
             {% endif %}
           </div>
         </div>
 
       </div>
-    </section><!-- End Call To Action Section -->
+    </section> End Call To Action Section -->
 
       
   <main id="main">
