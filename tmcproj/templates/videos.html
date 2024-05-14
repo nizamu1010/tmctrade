@@ -2,7 +2,7 @@
 
 {% if forloop.counter == 1 %}
     {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep1.jpg' %}" controlsList="nodownload">
+    <video controls loop muted poster="{% static 'tutorials/ep1.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v1.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -20,7 +20,7 @@
 
 {% elif forloop.counter == 2 %}
     {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep2.jpg' %}" controlsList="nodownload">
+    <video controls loop muted poster="{% static 'tutorials/ep2.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v2.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -38,7 +38,7 @@
 
 {% elif forloop.counter == 3 %}
 {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep3.jpg' %}" controlsList="nodownload">
+    <video controls loop muted poster="{% static 'tutorials/ep3.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v3.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -56,13 +56,12 @@
 
 {% elif forloop.counter == 4 %}
         {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep4.jpg' %}" controlsList="nodownload">
+    <video controls loop muted poster="{% static 'tutorials/ep4.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v4.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
     {% elif not video.is_unlocked and video.watched_previous %}
     <img src="{% static 'tutorials/ep4.jpg' %}">
-    {% else %}
     <a href="{% url 'unlock_video' 4 %}" class="text-start text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i>Unlock</a>    
     <img src="{% static 'tutorials/ep4.jpg' %}">
     <a href="#" data-bs-toggle="modal" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-lock-fill"></i> Locked</a>
@@ -74,7 +73,7 @@
 
 {% elif forloop.counter == 5 %}
         {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep5.jpg' %}" controlsList="nodownload">
+    <video controls loop muted poster="{% static 'tutorials/ep5.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v5.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -92,7 +91,7 @@
 
 {% elif forloop.counter == 6 %}
         {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep6.jpg' %}" controlsList="nodownload">
+    <video controls loop muted poster="{% static 'tutorials/ep6.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v6.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -110,7 +109,7 @@
 
 {% elif forloop.counter == 7 %}
         {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep7.jpg' %}" controlsList="nodownload">
+    <video controls loop muted poster="{% static 'tutorials/ep7.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v7.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -128,7 +127,7 @@
 
 {% elif forloop.counter == 8 %}
         {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep8.jpg' %}" controlsList="nodownload">
+    <video controls loop muted poster="{% static 'tutorials/ep8.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v8.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -146,7 +145,7 @@
 
 {% elif forloop.counter == 9 %}
         {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep9.jpg' %}" controlsList="nodownload">
+    <video controls loop muted poster="{% static 'tutorials/ep9.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v9.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -164,7 +163,7 @@
 
 {% elif forloop.counter == 10 %}
         {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep10.jpg' %}" controlsList="nodownload">
+    <video controls loop muted poster="{% static 'tutorials/ep10.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v10.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -182,7 +181,7 @@
 
 {% elif forloop.counter == 11 %}
         {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep11.jpg' %}" controlsList="nodownload">
+    <video controls loop muted poster="{% static 'tutorials/ep11.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v11.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -200,7 +199,7 @@
 
 {% elif forloop.counter == 12 %}
         {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep12.jpg' %}" controlsList="nodownload">
+    <video controls loop muted poster="{% static 'tutorials/ep12.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v12.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -218,7 +217,7 @@
 
 {% elif forloop.counter == 13 %}
         {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep13.jpg' %}" controlsList="nodownload">
+    <video controls loop muted poster="{% static 'tutorials/ep13.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v13.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -243,7 +242,7 @@
 
 {% elif forloop.counter == 15 %}
         {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep14.jpg' %}" controlsList="nodownload">
+    <video controls loop muted poster="{% static 'tutorials/ep14.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v14.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -261,7 +260,7 @@
 
 {% elif forloop.counter == 16 %}
         {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep15.jpg' %}" controlsList="nodownload">
+    <video controls loop muted poster="{% static 'tutorials/ep15.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v15.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -279,7 +278,7 @@
 
 {% elif forloop.counter == 17 %}
         {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep16.jpg' %}" controlsList="nodownload">
+    <video controls loop muted poster="{% static 'tutorials/ep16.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v16.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -297,7 +296,7 @@
 
 {% elif forloop.counter == 18 %}
         {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep17.jpg' %}" controlsList="nodownload">
+    <video controls loop muted poster="{% static 'tutorials/ep17.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v17.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -315,7 +314,7 @@
 
 {% elif forloop.counter == 19 %}
         {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep18.jpg' %}" controlsList="nodownload">
+    <video controls loop muted poster="{% static 'tutorials/ep18.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v18.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -333,7 +332,7 @@
 
 {% elif forloop.counter == 20 %}
         {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep19.jpg' %}" controlsList="nodownload">
+    <video controls loop muted poster="{% static 'tutorials/ep19.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v19.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -351,7 +350,7 @@
 
 {% elif forloop.counter == 21 %}
         {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep20.jpg' %}" controlsList="nodownload">
+    <video controls loop muted poster="{% static 'tutorials/ep20.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v20.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -369,7 +368,7 @@
 
 {% elif forloop.counter == 22 %}
     {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep21.jpg' %}" controlsList="nodownload">
+    <video controls loop muted poster="{% static 'tutorials/ep21.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v21.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -387,7 +386,7 @@
 
 {% elif forloop.counter == 23 %}
     {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep22.jpg' %}" controlsList="nodownload">
+    <video controls loop muted poster="{% static 'tutorials/ep22.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v22.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -405,7 +404,7 @@
 
 {% elif forloop.counter == 24 %}
     {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep23.jpg' %}" controlsList="nodownload">
+    <video controls loop muted poster="{% static 'tutorials/ep23.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v23.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video2>
@@ -423,7 +422,7 @@
 
 {% elif forloop.counter == 25 %}
     {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep24.jpg' %}" controlsList="nodownload">
+    <video controls loop muted poster="{% static 'tutorials/ep24.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v24.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -441,7 +440,7 @@
 
 {% elif forloop.counter == 26 %}
     {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep25.jpg' %}" controlsList="nodownload">
+    <video controls loop muted poster="{% static 'tutorials/ep25.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v25.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -459,7 +458,7 @@
 
 {% elif forloop.counter == 27 %}
     {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep26.jpg' %}" controlsList="nodownload">
+    <video controls loop muted poster="{% static 'tutorials/ep26.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v21.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -477,7 +476,7 @@
 
 {% else %}
     {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep27.jpg' %}" controlsList="nodownload">
+    <video controls loop muted poster="{% static 'tutorials/ep27.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v27.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
