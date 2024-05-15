@@ -2,7 +2,7 @@
 
 {% if forloop.counter == 1 %}
     {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep1.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
+    <video class="tutorial-video" controls loop muted poster="{% static 'tutorials/ep1.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v1.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -20,7 +20,7 @@
 
 {% elif forloop.counter == 2 %}
     {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep2.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
+    <video class="tutorial-video" controls loop muted poster="{% static 'tutorials/ep2.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v2.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -38,7 +38,7 @@
 
 {% elif forloop.counter == 3 %}
 {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep3.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
+    <video class="tutorial-video" controls loop muted poster="{% static 'tutorials/ep3.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v3.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -56,7 +56,7 @@
 
 {% elif forloop.counter == 4 %}
         {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep4.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
+    <video class="tutorial-video" controls loop muted poster="{% static 'tutorials/ep4.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v4.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -73,7 +73,7 @@
 
 {% elif forloop.counter == 5 %}
         {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep5.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
+    <video class="tutorial-video" controls loop muted poster="{% static 'tutorials/ep5.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v5.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -91,7 +91,7 @@
 
 {% elif forloop.counter == 6 %}
         {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep6.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
+    <video class="tutorial-video" controls loop muted poster="{% static 'tutorials/ep6.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v6.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -109,7 +109,7 @@
 
 {% elif forloop.counter == 7 %}
         {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep7.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
+    <video class="tutorial-video" controls loop muted poster="{% static 'tutorials/ep7.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v7.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -127,7 +127,7 @@
 
 {% elif forloop.counter == 8 %}
         {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep8.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
+    <video class="tutorial-video" controls loop muted poster="{% static 'tutorials/ep8.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v8.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -145,7 +145,7 @@
 
 {% elif forloop.counter == 9 %}
         {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep9.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
+    <video class="tutorial-video" controls loop muted poster="{% static 'tutorials/ep9.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v9.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -163,7 +163,7 @@
 
 {% elif forloop.counter == 10 %}
         {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep10.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
+    <video class="tutorial-video" controls loop muted poster="{% static 'tutorials/ep10.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v10.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -181,7 +181,7 @@
 
 {% elif forloop.counter == 11 %}
         {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep11.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
+    <video class="tutorial-video" controls loop muted poster="{% static 'tutorials/ep11.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v11.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -199,7 +199,7 @@
 
 {% elif forloop.counter == 12 %}
         {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep12.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
+    <video class="tutorial-video" controls loop muted poster="{% static 'tutorials/ep12.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v12.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -217,7 +217,7 @@
 
 {% elif forloop.counter == 13 %}
         {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep13.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
+    <video class="tutorial-video" controls loop muted poster="{% static 'tutorials/ep13.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v13.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -233,16 +233,16 @@
         <p class="card-text">EP 13 - Paper Trading Platform | Trading View Basic</p>
     </div>
 
+
 {% elif forloop.counter == 14 %}
 
-    <div class="my-0" style="text-align: center; background-color: #f9f9f9; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-        <h2 style="margin-bottom: 0; font-size: 24px; color: #1a1a1a; font-weight: bold;">Learn Trading Course</h2>
-        <p style="margin-top: 5px; font-size: 16px; color: #4d4d4d;">From Basic Part 02 (Episodes 14 to 27)</p> 
-    </div>
+<div class="mt-0 mb-4 border-none" style="text-align: center; background-color: #f9f9f9; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+    <h2 style="margin-bottom: 0; font-size: 24px; color: #1a1a1a; font-weight: bold;">Learn Trading Course</h2>
+    <p style="margin-top: 5px; font-size: 16px; color: #4d4d4d;">From Basic Part 02 (Episodes 14 to 27)</p> 
+</div>
 
-{% elif forloop.counter == 15 %}
         {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep14.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
+    <video class="tutorial-video" controls loop muted poster="{% static 'tutorials/ep14.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v14.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -258,9 +258,9 @@
         <p class="card-text">EP 14 - Type of Indicators | Moving Average Trading Strategy</p>
     </div>
 
-{% elif forloop.counter == 16 %}
+{% elif forloop.counter == 15 %}
         {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep15.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
+    <video class="tutorial-video" controls loop muted poster="{% static 'tutorials/ep15.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v15.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -276,9 +276,9 @@
         <p class="card-text">EP 15 - Cup and Handle Pattern | How to Trade</p>
     </div>
 
-{% elif forloop.counter == 17 %}
+{% elif forloop.counter == 16 %}
         {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep16.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
+    <video class="tutorial-video" controls loop muted poster="{% static 'tutorials/ep16.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v16.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -294,9 +294,9 @@
         <p class="card-text">EP 16 - Rising Wedge Pattern | How to Trade</p>
     </div>
 
-{% elif forloop.counter == 18 %}
+{% elif forloop.counter == 17 %}
         {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep17.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
+    <video class="tutorial-video" controls loop muted poster="{% static 'tutorials/ep17.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v17.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -312,9 +312,9 @@
         <p class="card-text">EP 17 - Falling Wedge Pattern | How to Trade</p>
     </div>
 
-{% elif forloop.counter == 19 %}
+{% elif forloop.counter == 18 %}
         {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep18.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
+    <video class="tutorial-video" controls loop muted poster="{% static 'tutorials/ep18.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v18.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -330,9 +330,9 @@
         <p class="card-text">EP 18 - Triple Bottom Pattern | How to Trade</p>
     </div>
 
-{% elif forloop.counter == 20 %}
+{% elif forloop.counter == 19 %}
         {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep19.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
+    <video class="tutorial-video" controls loop muted poster="{% static 'tutorials/ep19.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v19.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -348,9 +348,9 @@
         <p class="card-text">EP 19 - Hanging Man &  Hammer Candle Stick | How to Trade</p>
     </div>
 
-{% elif forloop.counter == 21 %}
+{% elif forloop.counter == 20 %}
         {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep20.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
+    <video class="tutorial-video" controls loop muted poster="{% static 'tutorials/ep20.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v20.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -366,9 +366,9 @@
         <p class="card-text">EP 20 - Inverted Hammer & Shooting Star Candle Stick | How to Trade</p>
     </div>
 
-{% elif forloop.counter == 22 %}
+{% elif forloop.counter == 21 %}
     {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep21.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
+    <video class="tutorial-video" controls loop muted poster="{% static 'tutorials/ep21.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v21.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -384,9 +384,9 @@
         <p class="card-text">EP 21 - Engulfing Candles | How to Trade</p>
     </div>
 
-{% elif forloop.counter == 23 %}
+{% elif forloop.counter == 22 %}
     {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep22.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
+    <video class="tutorial-video" controls loop muted poster="{% static 'tutorials/ep22.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v22.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -402,9 +402,9 @@
         <p class="card-text">EP 22 - Bearish Flag Pattern | Trend Continuation | Entry Exit Target</p>
     </div>
 
-{% elif forloop.counter == 24 %}
+{% elif forloop.counter == 23 %}
     {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep23.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
+    <video class="tutorial-video" controls loop muted poster="{% static 'tutorials/ep23.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v23.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video2>
@@ -420,9 +420,9 @@
         <p class="card-text">EP 23 - Fibonacci Retracement | Tool  Basic</p>
     </div>
 
-{% elif forloop.counter == 25 %}
+{% elif forloop.counter == 24 %}
     {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep24.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
+    <video class="tutorial-video" controls loop muted poster="{% static 'tutorials/ep24.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v24.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -438,9 +438,9 @@
         <p class="card-text">EP 24 - Symmetrical Triangle | Neutral  Pattern</p>
     </div>
 
-{% elif forloop.counter == 26 %}
+{% elif forloop.counter == 25 %}
     {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep25.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
+    <video class="tutorial-video" controls loop muted poster="{% static 'tutorials/ep25.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v25.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -456,9 +456,9 @@
         <p class="card-text">EP 25 - RSI Divergence | Trend Reverse</p>
     </div>
 
-{% elif forloop.counter == 27 %}
+{% elif forloop.counter == 26 %}
     {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep26.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
+    <video class="tutorial-video" controls loop muted poster="{% static 'tutorials/ep26.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v21.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -476,7 +476,7 @@
 
 {% else %}
     {% if video.is_unlocked and video.watched_previous %}
-    <video controls loop muted poster="{% static 'tutorials/ep27.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
+    <video class="tutorial-video" controls loop muted poster="{% static 'tutorials/ep27.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v27.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -493,3 +493,25 @@
     </div>
 
 {% endif %}
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function() {
+    var videos = document.getElementsByClassName("tutorial-video");
+    for (var i = 0; i < videos.length; i++) {
+        videos[i].addEventListener("play", function(event) {
+            pauseOtherVideos(event.target);
+        });
+    }
+});
+
+function pauseOtherVideos(currentVideo) {
+    var videos = document.getElementsByClassName("tutorial-video");
+    for (var i = 0; i < videos.length; i++) {
+        if (videos[i] !== currentVideo) {
+            videos[i].pause();
+        }
+    }
+}
+
+</script>
