@@ -64,6 +64,7 @@
     <img src="{% static 'tutorials/ep4.jpg' %}">
     <a href="{% url 'unlock_video' 4 %}" class="text-start text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i>Unlock</a>    
     <img src="{% static 'tutorials/ep4.jpg' %}">
+    {% else %}
     <a href="#" data-bs-toggle="modal" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-lock-fill"></i> Locked</a>
     {% endif %}
 
