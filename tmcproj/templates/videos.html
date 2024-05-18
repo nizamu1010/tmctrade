@@ -403,15 +403,15 @@
         <p class="card-text">EP 22 - Bearish Flag Pattern | Trend Continuation | Entry Exit Target</p>
     </div>
 
-{% elif forloop.counter == 23 %}
+    {% elif forloop.counter == 23 %}
     {% if video.is_unlocked and video.watched_previous %}
     <video class="tutorial-video" controls loop muted poster="{% static 'tutorials/ep23.jpg' %}" controlsList="nodownload" oncontextmenu="return false;">
         <source src="{% static 'tutorials/v23.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
-    </video2>
+    </video>
     {% elif not video.is_unlocked and video.watched_previous %}
     <img src="{% static 'tutorials/ep23.jpg' %}">
-    <a href="{% url 'unlock_video' 23 %}" class="text-start text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i>Unlock</a>   
+    <a href="{% url 'unlock_video' 23 %}" class="text-start text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-unlock-fill"></i>Unlock</a>    
     {% else %}
     <img src="{% static 'tutorials/ep23.jpg' %}">
     <a href="#" data-bs-toggle="modal" class="text-decoration-none mt-3 text-danger text-start px-4 fw-bold"><i class="bi bi-lock-fill"></i> Locked</a>
